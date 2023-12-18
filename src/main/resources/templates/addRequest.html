@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/mainLayout.html"
+>
+<div class="container" layout:fragment="mainFragment1">
+
+<div class="container">
+   <form method="post" th:action="@{'/add_request'}">
+      <div class="mb-3">
+         <label >ФИО</label>
+         <input type="text" class="form-control" name="userName">
+      </div>
+      <div class="mb-3">
+         <label >Телефон:</label>
+         <input type="text" class="form-control" name="phone">
+      </div>
+      <div class="mb-3">
+         <label >Курс:</label>
+         <select class="form-control" name="courseName">
+            <option>Java Core</option>
+            <option>Spring Data</option>
+            <option>Java EE</option>
+            <option>Intro to WEB</option>
+            <option>Designer</option>
+         </select>
+      </div>
+      <div class="mb-3">
+         <label >Комментарии</label>
+         <input type="text" class="form-control" name="commentary">
+      </div>
+      <div class="mb-3">
+         <button class="btn btn-success">Add Item</button>
+      </div>
+   </form>
+</div>
+
+</div>
+</div>
+</html>
